@@ -113,22 +113,24 @@
   @media (min-width:780px) and (min-height:620px){
     html,body{height:100%;overflow:hidden}
     body{justify-content:center}
+    /* on repartit sur toute la hauteur : titre en haut, cartes au centre, contact en bas */
     .wrap{
       max-width:1500px;height:100dvh;
-      padding:clamp(22px,3.2vh,44px) clamp(26px,3.4vw,60px);
-      display:flex;flex-direction:column;justify-content:center;
-      gap:clamp(18px,3.2vh,40px);
+      padding:clamp(30px,4.6vh,64px) clamp(26px,3.4vw,60px) clamp(24px,3.4vh,46px);
+      display:flex;flex-direction:column;justify-content:space-between;
+      gap:clamp(20px,3vh,42px);
     }
 
-    header{padding:0}
+    header{padding:0;flex:0 0 auto}
     .wm{font-size:clamp(32px,2.9vw,42px)}
-    .tag{margin-top:12px;font-size:clamp(15px,1.15vw,17.5px);max-width:560px}
+    .tag{margin-top:14px;font-size:clamp(15px,1.15vw,17.5px);max-width:560px}
+    .bottom{flex:0 0 auto}
 
-    /* rangee de cartes, hauteurs egalisees */
+    /* rangee de cartes centree dans l'espace restant, hauteurs egalisees */
     .links{
       flex:0 1 auto;min-height:0;
       flex-direction:row;align-items:stretch;
-      gap:clamp(16px,1.6vw,28px);padding:0;
+      gap:clamp(18px,1.9vw,34px);padding:0;
     }
     .link{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
     .link:hover{transform:translateY(-6px)}
@@ -149,7 +151,7 @@
     .contact p{margin-bottom:0;font-size:clamp(14px,1.05vw,16px)}
     .btns{justify-content:center}
 
-    footer{padding:0;font-size:12.5px;flex:0 0 auto}
+    footer{padding:clamp(14px,1.8vh,22px) 0 0;font-size:12.5px;flex:0 0 auto}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
@@ -167,15 +169,17 @@
 
   <main class="links" id="links"></main>
 
-  <section class="contact">
-    <p>Une question ? On repond dans la journee.</p>
-    <div class="btns">
-      <a class="btn b1" href="https://wa.me/22607429563?text=Bonjour%20Atelier%20Web%2C" target="_blank" rel="noopener">WhatsApp +226 07 42 95 63</a>
-      <a class="btn b2" href="mailto:team.atelierweb@gmail.com">Nous ecrire</a>
-    </div>
-  </section>
+  <div class="bottom">
+    <section class="contact">
+      <p>Une question ? On repond dans la journee.</p>
+      <div class="btns">
+        <a class="btn b1" href="https://wa.me/22607429563?text=Bonjour%20Atelier%20Web%2C" target="_blank" rel="noopener">WhatsApp +226 07 42 95 63</a>
+        <a class="btn b2" href="mailto:team.atelierweb@gmail.com">Nous ecrire</a>
+      </div>
+    </section>
 
-  <footer>Atelier Web - Ouagadougou, Burkina Faso</footer>
+    <footer>Atelier Web - Ouagadougou, Burkina Faso</footer>
+  </div>
 </div>
 
 <script>
