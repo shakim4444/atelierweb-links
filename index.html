@@ -108,6 +108,49 @@
     .body{padding:18px 18px 20px;gap:13px}
     .body h2{font-size:19.5px}
   }
+
+  /* ---------- tablette + bureau : plein ecran, 3 cartes en ligne, sans defilement ---------- */
+  @media (min-width:780px) and (min-height:620px){
+    html,body{height:100%;overflow:hidden}
+    body{justify-content:center}
+    .wrap{
+      max-width:1500px;height:100dvh;
+      padding:clamp(22px,3.2vh,44px) clamp(26px,3.4vw,60px);
+      display:flex;flex-direction:column;justify-content:center;
+      gap:clamp(18px,3.2vh,40px);
+    }
+
+    header{padding:0}
+    .wm{font-size:clamp(32px,2.9vw,42px)}
+    .tag{margin-top:12px;font-size:clamp(15px,1.15vw,17.5px);max-width:560px}
+
+    /* rangee de cartes, hauteurs egalisees */
+    .links{
+      flex:0 1 auto;min-height:0;
+      flex-direction:row;align-items:stretch;
+      gap:clamp(16px,1.6vw,28px);padding:0;
+    }
+    .link{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
+    .link:hover{transform:translateY(-6px)}
+
+    /* apercu a proportion fixe : le site reste lisible, pas de sur-zoom */
+    .thumb{aspect-ratio:16/10;flex:0 0 auto}
+    .body{flex:1 1 auto;padding:20px 22px 22px}
+    .body h2{font-size:clamp(19px,1.35vw,23px)}
+    .body p{font-size:clamp(13px,.95vw,14.5px)}
+
+    /* contact colle en bas de l'ecran */
+    .contact{
+      margin:0;flex:0 0 auto;
+      padding:clamp(18px,2.4vh,28px) 28px;
+      display:flex;align-items:center;justify-content:center;
+      gap:clamp(16px,2vw,32px);flex-wrap:wrap;
+    }
+    .contact p{margin-bottom:0;font-size:clamp(14px,1.05vw,16px)}
+    .btns{justify-content:center}
+
+    footer{padding:0;font-size:12.5px;flex:0 0 auto}
+  }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
     .link{opacity:1;transform:none}
