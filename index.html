@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atelier Web - Tous nos liens</title>
+<meta name="description" content="Modeles de sites premium, Commercea (caisse et gestion de stock) et developpement d'applications sur mesure. Ouagadougou, Burkina Faso.">
+<meta name="theme-color" content="#F4EDE0">
+<meta property="og:title" content="Atelier Web - Tous nos liens">
+<meta property="og:description" content="Sites premium, logiciel de caisse, applications sur mesure.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./logo.png">
+<link rel="apple-touch-icon" href="./logo.png">
+<style>
+  :root{
+    --ink:#2A2118; --card:#FFFCF7; --paper:#F4EDE0; --ember:#E4572E; --gold:#8F6B1E;
+    --muted:rgba(42,33,24,.64); --line:rgba(42,33,24,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Archivo",system-ui,sans-serif;color:var(--ink);
+    background:radial-gradient(120% 70% at 50% -10%, #FBF7EF 0%, #F4EDE0 56%, #EDE3D1 100%);
+    background-attachment:fixed;min-height:100vh;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .wrap{width:100%;max-width:620px;padding:0 22px;display:flex;flex-direction:column;flex:1}
+
+  /* ---------- entete ---------- */
+  header{padding:52px 0 0;text-align:center}
+  .wm{
+    font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:36px;letter-spacing:-.005em;
+    color:var(--ink);text-decoration:none;line-height:1;display:inline-block;
+  }
+  .wm em{font-style:italic;font-weight:500}
+  .wm i{color:var(--ember);font-style:normal}
+  .tag{
+    margin-top:16px;font-size:15.5px;line-height:1.6;color:var(--muted);font-weight:500;
+    max-width:400px;margin-left:auto;margin-right:auto;
+  }
+
+  /* ---------- cartes ---------- */
+  .links{display:flex;flex-direction:column;gap:18px;padding:42px 0 10px}
+  .link{
+    position:relative;display:block;text-decoration:none;color:inherit;
+    background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;
+    box-shadow:0 8px 24px rgba(42,33,24,.07);
+    transition:transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s, border-color .3s;
+    opacity:0;transform:translateY(16px);
+  }
+  .link.in{opacity:1;transform:none}
+  .link:hover{transform:translateY(-4px);border-color:rgba(42,33,24,.26);box-shadow:0 22px 48px rgba(42,33,24,.16)}
+  .link:active{transform:translateY(-1px)}
+  .link:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+
+  .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#EDE3D1}
+  .thumb img{
+    width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+    transition:transform .6s cubic-bezier(.2,.7,.3,1);
+  }
+  .link:hover .thumb img{transform:scale(1.04)}
+  .num{
+    position:absolute;left:14px;top:14px;z-index:2;
+    font-family:"Fraunces",serif;font-size:13px;font-weight:700;letter-spacing:.1em;
+    color:#FFF6EC;background:rgba(42,33,24,.82);padding:6px 12px;border-radius:999px;
+  }
+
+  .body{padding:20px 22px 22px;display:flex;align-items:center;gap:16px}
+  .txt{flex:1;min-width:0}
+  .body h2{
+    font-family:"Young Serif",serif;font-weight:400;font-size:21px;line-height:1.22;
+    letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .body p{font-size:14px;color:var(--muted);line-height:1.5}
+  .go{
+    flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+    background:var(--ink);color:#FFF6EC;font-size:19px;line-height:1;
+    transition:transform .3s cubic-bezier(.2,.7,.3,1), background .3s;
+  }
+  .link:hover .go{transform:translateX(4px);background:var(--ember)}
+
+  /* ---------- contact ---------- */
+  .contact{
+    margin:26px 0 0;padding:26px 24px;border-radius:22px;text-align:center;
+    background:var(--ember);color:#FFF6EC;
+  }
+  .contact p{font-size:14.5px;color:rgba(255,246,236,.92);margin-bottom:16px;font-weight:500}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700;text-decoration:none;
+    padding:13px 22px;border-radius:999px;transition:transform .22s cubic-bezier(.2,.7,.3,1), box-shadow .22s;
+  }
+  .b1{background:var(--ink);color:#FFF6EC}
+  .b2{background:rgba(255,246,236,.16);color:#FFF6EC;border:1.5px solid rgba(255,246,236,.5)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+  .btn:focus-visible{outline:2px solid #FFF6EC;outline-offset:3px}
+
+  footer{padding:32px 0 44px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8}
+
+  @media (max-width:560px){
+    header{padding-top:40px}
+    .wm{font-size:31px}
+    .links{padding-top:34px;gap:16px}
+    .body{padding:18px 18px 20px;gap:13px}
+    .body h2{font-size:19.5px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .link{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="wm" href="#" aria-label="Atelier Web"><em>atelier</em>web<i>.</i></a>
+    <p class="tag">Sites premium, logiciel de caisse et applications sur mesure. Choisissez ce qui vous interesse.</p>
+  </header>
+
+  <main class="links" id="links"></main>
+
+  <section class="contact">
+    <p>Une question ? On repond dans la journee.</p>
+    <div class="btns">
+      <a class="btn b1" href="https://wa.me/22607429563?text=Bonjour%20Atelier%20Web%2C" target="_blank" rel="noopener">WhatsApp +226 07 42 95 63</a>
+      <a class="btn b2" href="mailto:team.atelierweb@gmail.com">Nous ecrire</a>
+    </div>
+  </section>
+
+  <footer>Atelier Web - Ouagadougou, Burkina Faso</footer>
+</div>
+
+<script>
+  var LINKS = [
+    {
+      href:'https://modeles.atelierweb.dev', ext:true, img:'./apercus/restaurant.jpg',
+      titre:'Modeles de sites',
+      desc:'10 sites premium prets a personnaliser. Le votre en ligne en 72h.'
+    },
+    {
+      href:'https://atelierweb.dev/commercea', ext:true, img:'./apercus-sites/commercea.jpg',
+      titre:'Commercea',
+      desc:'Le logiciel de caisse et de gestion de stock pour votre commerce.'
+    },
+    {
+      href:'https://atelierweb.dev', ext:true, img:'./apercus-sites/apps.jpg',
+      titre:"Developpement d'applications",
+      desc:'On conçoit et on code l\'application sur mesure de votre activite.'
+    }
+  ];
+
+  var box = document.getElementById('links');
+  LINKS.forEach(function(l, i){
+    var a = document.createElement('a');
+    a.className = 'link';
+    a.href = l.href;
+    if (l.ext) { a.target = '_blank'; a.rel = 'noopener'; }
+    a.setAttribute('aria-label', l.titre);
+    a.innerHTML =
+      '<div class="thumb">' +
+        '<span class="num">0' + (i+1) + '</span>' +
+        '<img src="' + l.img + '" alt="" loading="lazy" width="1280" height="720">' +
+      '</div>' +
+      '<div class="body">' +
+        '<div class="txt"><h2>' + l.titre + '</h2><p>' + l.desc + '</p></div>' +
+        '<span class="go" aria-hidden="true">&rarr;</span>' +
+      '</div>';
+    box.appendChild(a);
+  });
+
+  // apparition progressive (avec filet de securite)
+  (function(){
+    var items = box.querySelectorAll('.link');
+    function showAll(){ items.forEach(function(x){ x.classList.add('in'); }); }
+    if (!('IntersectionObserver' in window)) { showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) {
+          var i = Array.prototype.indexOf.call(items, e.target);
+          e.target.style.transitionDelay = (i * 80) + 'ms';
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin:'0px 0px -30px 0px' });
+    items.forEach(function(x){ io.observe(x); });
+    setTimeout(showAll, 1500);
+  })();
+</script>
+</body>
+</html>
